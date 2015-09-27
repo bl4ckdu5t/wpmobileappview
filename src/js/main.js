@@ -436,6 +436,10 @@ $(document).ready(function() {
       setTimeout(function () { myScroll.refresh(); }, 100);
 
     });
+		var listContent = '<li><img src="http://placehold.it/300x250" alt="placeholder" style="width:100%;height:auto;float:none;" ></li>';
+	  setTimeout(function(){ $('#allpost li:nth-child(5)').after(listContent) }, 6000);
+	  setTimeout(function(){ $('#allpost li:nth-child(10)').after(listContent) }, 6000);
+	  setTimeout(function(){ $('#allpost li:nth-child(15)').after(listContent) }, 6000);
 
 });
 

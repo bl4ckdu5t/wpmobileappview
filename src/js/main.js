@@ -35,11 +35,11 @@ if((navigator.userAgent.match(/iPhone/i))||(navigator.userAgent.match(/iPod/i))|
 		useFastTouch: true,
     	statusBar: 'default',
     	preloadImages: [
-		'src/img/loading.gif',
-		'src/img/iPhoneIcon_Medium.png',
-		'src/img/pinstripes2.gif',
-		'src/img/UIBack.png',
-		'src/img/UIBackPressed.png',
+		PLUGIN_URL+'src/img/loading.gif',
+		PLUGIN_URL+'src/img/iPhoneIcon_Medium.png',
+		PLUGIN_URL+'src/img/pinstripes2.gif',
+		PLUGIN_URL+'src/img/UIBack.png',
+		PLUGIN_URL+'src/img/UIBackPressed.png',
 		]
 	});
 	//alert('is iPhone');
@@ -50,11 +50,11 @@ if((navigator.userAgent.match(/iPhone/i))||(navigator.userAgent.match(/iPod/i))|
 		useFastTouch: false,
     	statusBar: 'default',
     	preloadImages: [
-		'src/img/loading.gif',
-		'src/img/iPhoneIcon_Medium.png',
-		'src/img/pinstripes2.gif',
-		'src/img/UIBack.png',
-		'src/img/UIBackPressed.png',
+		PLUGIN_URL+'src/img/loading.gif',
+		PLUGIN_URL+'src/img/iPhoneIcon_Medium.png',
+		PLUGIN_URL+'src/img/pinstripes2.gif',
+		PLUGIN_URL+'src/img/UIBack.png',
+		PLUGIN_URL+'src/img/UIBackPressed.png',
 		]
 	});
 	//alert('is not iPhone');

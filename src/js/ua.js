@@ -107,7 +107,7 @@ function ready () {
 			sizes = link[i].getAttribute('sizes');
 
 			if (sizes) {
-				if (isRetina && sizes == '114x114') { 
+				if (isRetina && sizes == '114x114') {
 					touchIcon = link[i].href;
 					break;
 				}
@@ -140,7 +140,7 @@ function loaded () {
 
 	setTimeout(function () {
 		var duration;
-		
+
 		startY = isIPad ? window.scrollY : window.innerHeight + window.scrollY;
 		startX = isIPad ? window.scrollX : Math.round((window.innerWidth - el.offsetWidth)/2) + window.scrollX;
 
@@ -217,7 +217,7 @@ function addToHomeClose () {
 	clearTimeout(closeTimeout);
 	closeTimeout = null;
 	el.removeEventListener('webkitTransitionEnd', transitionEnd, false);
-	
+
 	var posY = isIPad ? window.scrollY - startY : window.scrollY + window.innerHeight - startY,
 		posX = isIPad ? window.scrollX - startX : window.scrollX + Math.round((window.innerWidth - el.offsetWidth)/2) - startX,
 		opacity = '1',
@@ -263,3 +263,11 @@ function addToHomeClose () {
 /* Public functions */
 window.addToHomeClose = addToHomeClose;
 })();
+
+var count = $("#tabbar li").length;
+var percent = 100 / count;
+$("#tabbar li").css("width", percent + "%");
+var clickEventType = ((document.ontouchstart !== null) ? 'click' : 'touchstart');
+$("#tabbar a").bind(clickEventType, function() {
+    $("#tabbar a").addClass("current").not(this).removeClass("current")
+});

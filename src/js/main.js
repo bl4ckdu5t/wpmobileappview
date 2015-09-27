@@ -1,7 +1,4 @@
-var INDEX_URL = '<?php echo $template_url; ?>/';
-var PLUGIN_URL = '<?php echo $plugin_url; ?>/';
-var BLOG_TITLE = '<?php echo get_bloginfo( "name" ) ?>';
-var BLOG_DESC = '<?php echo get_bloginfo( "description" ); ?>';
+var PLUGIN_URL = $('html').data('plugin');
 var visible = false, sid = 0, s = 0;
 
 var myScroll;
@@ -29,20 +26,20 @@ iScroll.prototype._momentum= function (dist, time, maxDistUpper, maxDistLower, s
 if((navigator.userAgent.match(/iPhone/i))||(navigator.userAgent.match(/iPod/i))||(navigator.userAgent.match(/iPad/i))){
 	var jQT = new $.jQTouch({
    		//cacheGetRequests: false,
-    	icon: 'img/iPhoneIcon_Medium.png',
-    	icon4: 'img/iPhoneIcon_Big.png',
+    	icon: 'src/img/iPhoneIcon_Medium.png',
+    	icon4: 'src/img/iPhoneIcon_Big.png',
     	addGlossToIcon: false,
-    	startupScreen: 'img/istartup.png',
+    	startupScreen: 'src/img/istartup.png',
     	//statusBar: 'black-translucent',
     	themeSelectionSelector: '#jqt #themes ul',
 		useFastTouch: true,
     	statusBar: 'default',
     	preloadImages: [
-		'img/loading.gif',
-		'img/iPhoneIcon_Medium.png',
-		'img/pinstripes2.gif',
-		'img/UIBack.png',
-		'img/UIBackPressed.png',
+		'src/img/loading.gif',
+		'src/img/iPhoneIcon_Medium.png',
+		'src/img/pinstripes2.gif',
+		'src/img/UIBack.png',
+		'src/img/UIBackPressed.png',
 		]
 	});
 	//alert('is iPhone');

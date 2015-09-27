@@ -414,20 +414,26 @@ $(document).ready(function() {
 
             if (post.title !== undefined) {
 
-                var post_html = '<li class="blog-content arrow"><a onClick="send(' + post.id + ')" id=' + post.id + ' href="#single">';
-                //post_html += '<div class="float_right">' + post.date + '</div>';
+              var category;
+
+              $.getJSON(PLUGIN_URL + 'get_category.php?id='+ post.id, function(data){
+                  category = data.categories;
+                  $('#allpost .blog-content [onClick="send('+post.id+')"] img').after('<span class="tag '+category[0].cat_name.replace(' ','').substr(0, 4).toLowerCase()+'">'+category[0].cat_name+'</span>');
+              });
+              var post_html = '<li class="blog-content arrow"><a class="ding" onClick="send(' + post.id + ')" id=' + post.id + ' href="#single">';
                 post_html += post.get_thumb;
+                post_html += '<article>';
                 post_html += '<h2>' + post.title + '</h2>';
-                post_html += '<p>' + post.excerpt + '</p></a></li>';
+                post_html += '<time>'+ post.date + '</time>';
+                post_html += '<p>' + post.excerpt + '</p></article></a></li>';
 
                 // Append html string to container div
                 $('#allpost').append(post_html);
-                //if ( i == 5 ) return false;
             }
         });
 
-			hideLoading();
-			setTimeout(function () { myScroll.refresh(); }, 100);
+      hideLoading();
+      setTimeout(function () { myScroll.refresh(); }, 100);
 
     });
 

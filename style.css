@@ -201,6 +201,7 @@ Version: 0.1
  .post::-webkit-scrollbar-thumb:hover {
      background-color: #aaa;
  }
+ div#wpadminbar{display: none;}
  /* Helpers */
  .cf:before,
  .cf:after {

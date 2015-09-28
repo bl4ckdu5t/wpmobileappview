@@ -1,0 +1,26 @@
+{
+  "name": "wpmobileappview",
+  "version": "1.0.0",
+  "description": "Mobile View for wordpress",
+  "main": "static.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bl4ckdu5t/wpmobileappview.git"
+  },
+  "keywords": [
+    "wordpress",
+    "wp",
+    "mobile",
+    "performance",
+    "soc"
+  ],
+  "author": "Joseph Rex",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/bl4ckdu5t/wpmobileappview/issues"
+  },
+  "homepage": "https://github.com/bl4ckdu5t/wpmobileappview#readme"
+}

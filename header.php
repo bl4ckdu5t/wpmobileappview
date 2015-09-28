@@ -1,14 +1,16 @@
 <!doctype html>
 <html lang="en" data-plugin="">
 <head>
-  <meta charset="utf-8">
+  <meta charset="<?php bloginfo( 'charset' ); ?>" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-  <title>Something cool</title>
+  <title><?php wp_title(); ?></title>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="profile" href="http://gmpg.org/xfn/11">
+  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+  <?php wp_head(); ?>
   <script src="src/js/prefixfree.min.js"></script>
 </head>
-<body>
+<body <?php body_class(); ?>>
   <nav class="nav">
     <ul>
       <li><a href="">Entertainment</a></li>

@@ -34,5 +34,6 @@
 <!-- Scripts -->
 <script src="src/js/zepto.min.0.8.js" charset="utf-8"></script>
 <script src="src/js/main.js" charset="utf-8"></script>
+<?php wp_footer(); ?>
 </body>
 </html>

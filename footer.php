@@ -32,8 +32,7 @@
 </footer>
 </div>
 <!-- Scripts -->
-<script src="src/js/zepto.min.0.8.js" charset="utf-8"></script>
-<script src="src/js/main.js" charset="utf-8"></script>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>
